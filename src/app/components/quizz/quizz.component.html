@@ -14,8 +14,7 @@
     <button
       *ngFor="let option of questionSelected.options; let i = index"
       (click)="playerChoose(option.alias)"
-      class="btn-option"
-    >
+      class="btn-option">
       {{option.name}}
     </button>
 

@@ -49,7 +49,6 @@ export class QuizzComponent implements OnInit {
 
   async nextStep(){
     this.questionIndex+=1
-
     if(this.questionMaxIndex > this.questionIndex){
         this.questionSelected = this.questions[this.questionIndex]
     }else{
@@ -60,7 +59,6 @@ export class QuizzComponent implements OnInit {
   }
 
   async checkResult(anwsers:string[]){
-
     const result = anwsers.reduce((previous, current, i, arr)=>{
         if(
           arr.filter(item => item === previous).length >
@@ -71,9 +69,7 @@ export class QuizzComponent implements OnInit {
           return current
         }
     })
-
     return result
   }
-
 }
 
